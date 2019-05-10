@@ -1,0 +1,162 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "bookName": "1984",
+      "book": "1984",
+      "author": "George Orwell",
+      "printingYear": "2015",
+      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
+      "fullName": "Burcu Yaman",
+      "email": "burcu.yaman@gvg.com.tr",
+      "phone": "12345",
+      "date": "02/11/2018"
+    },
+    {
+      "bookName": "1984",
+      "book": "1984",
+      "author": "george orwell",
+      "printingYear": "2015",
+      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
+      "fullName": "a",
+      "email": "afchdshzszadzszgrserd@gmail.com",
+      "phone": "12",
+      "date": "04/14/2018",
+      "id": 2
+    },
+    {
+      "bookName": "Hayvan Mezarlığı",
+      "book": "hayvan-mezarligi",
+      "author": "Stephen King",
+      "printingYear": "2017",
+      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
+      "fullName": "Ali Veli",
+      "email": "ali@gmail.com",
+      "phone": "123456",
+      "date": "05/10/2018",
+      "id": 3
+    },
+    {
+      "bookName": "Başlangıç",
+      "book": "baslangic",
+      "author": "Dan Brown",
+      "printingYear": "2014",
+      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
+      "fullName": "Ayşe Fatma",
+      "email": "ayse@gmail.com",
+      "phone": "54321",
+      "date": "08/12/2018",
+      "id": 4
+    },
+    {
+      "bookName": "Hayvanlardan Tanrılara",
+      "book": "hayvanlardan-tanrilara",
+      "author": "Sapiens",
+      "printingYear": "2018",
+      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
+      "fullName": "Barış Baş",
+      "email": "baris@gmail.com",
+      "phone": "8765",
+      "date": "08/08/2018",
+      "id": 5
+    },
+    {
+      "bookName": "Ezilenler",
+      "book": "ezilenler",
+      "author": "Dostoyevski",
+      "printingYear": "2003",
+      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
+      "fullName": "Can Cem",
+      "email": "can@gmail.com",
+      "phone": "6543",
+      "date": "08/17/2018",
+      "id": 7
+    },
+    {
+      "bookName": "denemedir",
+      "book": "denemedir",
+      "author": "sbdkasd",
+      "printingYear": "jsbdh",
+      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
+      "fullName": "hbdhab",
+      "email": "hbahsd",
+      "phone": "hbsjdasd",
+      "date": "08/27/2018",
+      "id": 8
+    },
+    {
+      "bookName": "rrrfasd",
+      "book": "rrrfasd",
+      "author": "sdasd",
+      "printingYear": "",
+      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
+      "fullName": "",
+      "email": "asdasd",
+      "phone": "asdasd",
+      "date": "08/27/2018",
+      "id": 9
+    },
+    {
+      "bookName": "1984",
+      "book": "1984",
+      "author": "sdsd",
+      "printingYear": "",
+      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
+      "fullName": "",
+      "email": "dasdasdasd",
+      "phone": "",
+      "date": "08/27/2018",
+      "id": 10
+    }
+  ],
+  "waitingBooks": [
+    {
+      "bookName": "dasd",
+      "book": "dasd",
+      "author": "asdasd",
+      "printingYear": "",
+      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
+      "fullName": "",
+      "email": "asdasd",
+      "phone": "",
+      "date": "09/21/2018",
+      "id": 1
+    },
+    {
+      "bookName": "cscsdsc",
+      "book": "cscsdsc",
+      "author": "sdcds",
+      "printingYear": "",
+      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
+      "fullName": "",
+      "email": "csdcsdc",
+      "phone": "",
+      "date": "09/21/2018",
+      "id": 2
+    },
+    {
+      "bookName": "z<xas",
+      "book": "zxas",
+      "author": "asaS",
+      "printingYear": "",
+      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
+      "fullName": "",
+      "email": "asAS",
+      "phone": "",
+      "date": "09/21/2018",
+      "id": 3
+    },
+    {
+      "bookName": "dasd",
+      "book": "dasd",
+      "author": "asdasd",
+      "printingYear": "",
+      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
+      "fullName": "berat",
+      "email": "burcu.yaman@gvg.com.tr",
+      "phone": "",
+      "date": "11/03/2018",
+      "id": 4
+    }
+  ]
+}
