@@ -27,7 +27,7 @@ export const Content = styled.div`
 export const MenuContainer = styled.div`
     display: flex;
 
-    flex-direction: column;
+    flex-direction: row;
     justify-content:flex-end;
     align-items: flex-end;
 

@@ -58,7 +58,7 @@ export class AddWaitingBook extends Component {
                     book: book,
                     author: author,
                     printingYear: printingYear,
-                    bookImage: "https://react.semantic-ui.com/images/wireframe/image.png",
+                    bookImage: "https://react.semantic-ui.com/images/avatar/large/matthew.png",
                     fullName: fullName,
                     email: email,
                     phone: phone,
@@ -66,7 +66,6 @@ export class AddWaitingBook extends Component {
                 }),
             })
                 .then(() => {
-                    alert("girdi set")
                     this.setState({
                         isHidden: true
                     });

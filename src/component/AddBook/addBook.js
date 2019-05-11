@@ -60,7 +60,7 @@ export class AddBook extends Component {
                     book: book,
                     author: author,
                     printingYear: printingYear,
-                    bookImage: "https://react.semantic-ui.com/images/wireframe/image.png",
+                    bookImage: "https://react.semantic-ui.com/images/avatar/large/matthew.png",
                     fullName: fullName,
                     email: email,
                     phone: phone,

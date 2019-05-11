@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { getJSON } from "../../util/request";
 
-import { Item, Menu } from 'semantic-ui-react';
+import { Icon, Image, Item, Menu, Card } from 'semantic-ui-react';
 import { ItemContainer, Container, Content, MenuContainer} from './cardStyle'
 
 export class BookCard extends Component {
@@ -40,22 +40,25 @@ export class BookCard extends Component {
     render() {
         const items = this.state.findedBook.map((element) => {
             return (
-                <Item key={element.id}> 
-                    <Item.Image  size='tiny' src={element.bookImage} />
-                    <Item.Content verticalAlign='middle'>
-                        <Item.Header>
-                            {element.bookName}
-                        </Item.Header> 
-                        <Item.Meta>
-                            {element.author}
-                        </Item.Meta>
-                        <Item.Header>
-                            {element.email}
-                        </Item.Header>                              
-                    </Item.Content>
-                </Item>    
+                <Card>
+                    <Image src={element.bookImage} wrapped ui={false} />
+                    <Card.Content>
+                    <Card.Header>{element.bookName}</Card.Header>
+                    <Card.Meta>
+                        <span className='author'>{element.author}</span>
+                    </Card.Meta>
+                    <Card.Description>
+                        {element.email}
+                    </Card.Description>
+                    </Card.Content>
+                    <Card.Content extra>
+                    <a>
+                    <Icon name='like' />
+                        22 Like
+                    </a>
+                    </Card.Content>
+                </Card>
             );
-
         });
         return (
             <Container>
