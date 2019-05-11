@@ -1,22 +1,25 @@
-import React, { Component } from 'react';
-import Moment from 'moment';
+import React, { Component } from 'react'
+import { Link } from "react-router-dom"
+import Moment from 'moment'
 
-import { postJSON } from "../../util/request"
+import { NavigationMenu as Menu } from "../../../"
 
-import { Button, Form, Header, Icon, Input, Menu } from 'semantic-ui-react';
-import { Container, Content, FormStyle, MenuContainer } from './addBookStyle';
+import { postJSON } from "../../../../../util/request"
 
-export class AddBook extends Component {
+import { Button, Form, Header, Icon, Input, Modal } from 'semantic-ui-react'
+import { Container, Content, FormWrapper } from '../../page/AddBook.styled'
+
+export class AddWaitingBook extends Component {
     constructor() {
-        super();
+        super()
 
         this.state = {
             books: [],
             book: '',
-        };
-        this.addBook = this.addBook.bind(this);
+            isHidden: true
+        }
+        this.addBook = this.addBook.bind(this)
     }
-
     slugify = function (text) {
         var trMap = {
             'çÇ': 'c',
@@ -25,35 +28,34 @@ export class AddBook extends Component {
             'üÜ': 'u',
             'ıİ': 'i',
             'öÖ': 'o'
-        };
+        }
         for (var key in trMap) {
-            text = text.replace(new RegExp('[' + key + ']', 'g'), trMap[key]);
+            text = text.replace(new RegExp('[' + key + ']', 'g'), trMap[key])
         }
         return text.replace(/[^-a-zA-Z0-9\s]+/ig, '') // remove non-alphanumeric chars
             .replace(/\s/gi, "-") // convert spaces to dashes
             .replace(/[-]+/gi, "-") // trim repeated dashes
-            .toLowerCase();
+            .toLowerCase()
 
     }
-
     addBook(e) {
-        e.preventDefault();
-        let bookName = document.getElementById('bookName').value;
-        let book = this.slugify(bookName);
-        let author = document.getElementById('author').value;
-        let printingYear = document.getElementById('printingYear').value;
-        let fullName = document.getElementById('fullName').value;
-        let email = document.getElementById('email').value;
-        let phone = document.getElementById('phone').value;
-        let dateNow = new Date();
-        const formattedDate = Moment(dateNow).format('L');
+        e.preventDefault()
+        let bookName = document.getElementById('bookName').value
+        let book = this.slugify(bookName)
+        let author = document.getElementById('author').value
+        let printingYear = document.getElementById('printingYear').value
+        let fullName = document.getElementById('fullName').value
+        let email = document.getElementById('email').value
+        let phone = document.getElementById('phone').value
+        let dateNow = new Date()
+        const formattedDate = Moment(dateNow).format('L')
 
         if (!(bookName === "" || bookName === null ||
             email === "" || email === null ||
             author === "" || author === null
         )) {
             postJSON({
-                url: "books",
+                url: "waitingBooks",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     bookName: bookName,
@@ -67,34 +69,28 @@ export class AddBook extends Component {
                     date: formattedDate,
                 }),
             })
-                .then(() => {                   
-                    this.onSearch(book);
+                .then(() => {
+                    this.setState({
+                        isHidden: true
+                    })
                 })
                 .catch((error) => {
-                    console.log("Hata");
+                    console.log("Hata")
                 })
         }
         else {
-            alert("Kitapın adı, yazarı ve mail adresiniz boş olamaz.");
+            alert("Kitapın adı, yazarı ve mail adresiniz boş olamaz.")
         }
     }
 
-    onSearch = (book) => {
-        window.location.href = `card/${book}`;
-    }
     render() {
         return (
             <Container>
                 <Content>
-                    <Header as='h2' icon='add' onClick={this.props.routeAddBook} content='Kitap Ekle' />
-                    <MenuContainer>
-                        <Menu pointing>
-                            <Menu.Item name='Kitap Ara' onClick={this.props.routeSearchBook} />
-                            <Menu.Item name='Kitap Ekle' onClick={this.props.routeAddBook} />
-                        </Menu>
-                    </MenuContainer>
+                    <Header as='h2' icon='wait' onClick={this.props.routeAddWaitingBook } content='Beklenenlere Ekle' />
+                    <Menu />
                 </Content>
-                <FormStyle>
+                <FormWrapper>
                     <Form>
                         <Form.Group widths='equal'>
                             <Form.Field
@@ -136,15 +132,24 @@ export class AddBook extends Component {
                                 placeholder='isteğe bağlı'
                             />
                         </Form.Group>
-                        <Button floated="right" animated='fade' color='blue' onClick={this.addBook}>
+                            <Button floated="right" animated='fade' color='blue' onClick={this.addBook}>
                             <Button.Content visible>Kaydet</Button.Content>
                             <Button.Content hidden>
                                 <Icon name='add' />
                             </Button.Content>
                         </Button>
+
+                        {this.state.isHidden ?
+                        <Modal
+                            header='Reminder!'
+                            content='Call Benjamin regarding the reports.'
+                            actions={['Snooze', { key: 'done', content: 'Done', positive: true }]}
+                        />
+                        :
+                        alert("else") }
                     </Form>
-                </FormStyle>
+                </FormWrapper>
             </Container>
-        );
+        )
     }
 }

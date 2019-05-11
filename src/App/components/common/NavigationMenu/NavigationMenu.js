@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Menu } from "semantic-ui-react"
-import { MenuContainer } from "../AddBook/addBookStyle"
+import { MenuContainer } from "./NavigationMenu.styled"
 
 export default class NavigationMenu extends React.Component {
     constructor(props) {

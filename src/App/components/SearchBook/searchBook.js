@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { SearchList } from './searchedList';
 import { LastAdded } from './lastAdded';
 
-import Menu from "../common/NavigationMenu"
+import Menu from "../"
 
 import { Button, Header, Icon, Input, Label, Form, Segment } from 'semantic-ui-react';
 import { Container, Content, SearchContent, LastAddedList, Search } from './searchBookStyle';
