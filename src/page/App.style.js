@@ -8,6 +8,7 @@ export const Container = styled.div`
     align-items: center;
 
     height: 100%;
+    background: black;
 `;
 
 export const Box = styled.div`

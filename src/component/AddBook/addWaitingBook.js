@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom"
 import Moment from 'moment';
+
+import Menu from "../common/NavigationMenu"
 
 import { postJSON } from "../../util/request"
 
-import { Button, Form, Header, Icon, Input, Menu, Modal } from 'semantic-ui-react';
-import { Container, Content, FormStyle, MenuContainer } from './addBookStyle';
+import { Button, Form, Header, Icon, Input, Modal } from 'semantic-ui-react';
+import { Container, Content, FormStyle } from './addBookStyle';
+
 export class AddWaitingBook extends Component {
     constructor() {
         super();
@@ -84,12 +88,7 @@ export class AddWaitingBook extends Component {
             <Container>
                 <Content>
                     <Header as='h2' icon='wait' onClick={this.props.routeAddWaitingBook } content='Beklenenlere Ekle' />
-                    <MenuContainer>
-                        <Menu pointing>
-                            <Menu.Item name='Kitap Ara' onClick={this.props.routeSearchBook} />
-                            <Menu.Item name='Kitap Ekle' onClick={this.props.routeAddBook} />
-                        </Menu>
-                    </MenuContainer>
+                    <Menu />
                 </Content>
                 <FormStyle>
                     <Form>

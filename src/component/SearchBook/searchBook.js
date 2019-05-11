@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-import { getJSON } from "../../util/request"
-
-import { Button, Header, Icon, Input, Menu, Label, Form, Segment } from 'semantic-ui-react';
-import { Container, Content, MenuContainer, SearchContent, LastAddedList, Search } from './searchBookStyle';
-
 import { SearchList } from './searchedList';
 import { LastAdded } from './lastAdded';
+
+import Menu from "../common/NavigationMenu"
+
+import { Button, Header, Icon, Input, Label, Form, Segment } from 'semantic-ui-react';
+import { Container, Content, SearchContent, LastAddedList, Search } from './searchBookStyle';
+
+import { getJSON } from "../../util/request"
 
 export class SearchBook extends Component {
     constructor() {
@@ -122,12 +124,7 @@ export class SearchBook extends Component {
             <Container>
                 <Content>
                     <Header as='h2' icon='search' onClick={this.props.routeSearchBook} content='Kitap Ara' />
-                    <MenuContainer>
-                        <Menu pointing>
-                            <Menu.Item name='Kitap Ara' onClick={this.props.routeSearchBook} />
-                            <Menu.Item name='Kitap Ekle' onClick={this.props.routeAddBook} />
-                        </Menu>
-                    </MenuContainer>
+                        <Menu />
                 </Content>
                 <SearchContent>
                     <Form onSubmit={this.searchData}>

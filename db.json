@@ -119,6 +119,18 @@
       "phone": "",
       "date": "05/11/2019",
       "id": 11
+    },
+    {
+      "bookName": "Yüzüklerin Efendisi",
+      "book": "yuzuklerin-efendisi",
+      "author": "J.R.R Tolkien",
+      "printingYear": "2010",
+      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
+      "fullName": "burcu yaman",
+      "email": "burcuyaman16@hotmail.com",
+      "phone": "0543 221 9893",
+      "date": "05/11/2019",
+      "id": 12
     }
   ],
   "waitingBooks": [

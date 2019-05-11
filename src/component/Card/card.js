@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { getJSON } from "../../util/request";
 
 import { Icon, Image, Item, Menu, Card } from 'semantic-ui-react';
-import { ItemContainer, Container, Content, MenuContainer} from './cardStyle'
+import { ItemContainer, Container, Content, MenuContainer, CardWrapper } from './cardStyle.styled'
 
 export class BookCard extends Component {
     constructor(props) {
@@ -40,24 +40,26 @@ export class BookCard extends Component {
     render() {
         const items = this.state.findedBook.map((element) => {
             return (
-                <Card>
-                    <Image src={element.bookImage} wrapped ui={false} />
-                    <Card.Content>
-                    <Card.Header>{element.bookName}</Card.Header>
-                    <Card.Meta>
-                        <span className='author'>{element.author}</span>
-                    </Card.Meta>
-                    <Card.Description>
-                        {element.email}
-                    </Card.Description>
-                    </Card.Content>
-                    <Card.Content extra>
-                    <a>
-                    <Icon name='like' />
-                        22 Like
+                <CardWrapper>
+                    <Card>
+                        <Image src={element.bookImage} wrapped ui={false} />
+                        <Card.Content>
+                            <Card.Header>{element.bookName}</Card.Header>
+                            <Card.Meta>
+                                <span className='author'>{element.author}</span>
+                            </Card.Meta>
+                            <Card.Description>
+                                {element.email}
+                            </Card.Description>
+                        </Card.Content>
+                        <Card.Content extra>
+                            <a>
+                                <Icon name='like' />
+                                22 Like
                     </a>
-                    </Card.Content>
-                </Card>
+                        </Card.Content>
+                    </Card>
+                </CardWrapper>
             );
         });
         return (
