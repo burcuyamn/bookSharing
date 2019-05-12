@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import { Redirect, Link as RouterLink } from "react-router-dom"
 
-import { SearchList } from './searchedList';
-import { LastAdded } from './lastAdded';
+import { SearchList } from '../components/SearchedList';
+import { LastAdded } from '../components/LastAdded';
 
-import Menu from "../"
+import Menu from "../../common/NavigationMenu/NavigationMenu"
 
 import { Button, Header, Icon, Input, Label, Form, Segment } from 'semantic-ui-react';
-import { Container, Content, SearchContent, LastAddedList, Search } from './searchBookStyle';
+import { Container, Content, SearchContent, LastAddedList, Search } from '../page/SearchBook.styled';
 
-import { getJSON } from "../../util/request"
+import { getJSON } from "../../../../util/request"
 
-export class SearchBook extends Component {
+export default class SearchBook extends Component {
     constructor() {
         super();
 
@@ -27,6 +28,51 @@ export class SearchBook extends Component {
 
     componentDidMount() {
         this.getJsonData();
+    }
+
+    render() {
+        return (
+            <Container>
+                <Content>
+                    <Header
+                        as='h2' 
+                        icon='search' 
+                        content='Kitap Ara' 
+                    />
+                    <Menu />
+                </Content>
+                <SearchContent>
+                    <Form onSubmit={this.searchData}>
+                        <Input onChange={this.onInputChange} id="bookName" placeholder='Kitap ara' />
+                        <Button onClick={this.searchData} color='blue' animated='fade'>
+                            <Button.Content hidden>Ara</Button.Content>
+                            <Button.Content visible>
+                                <Icon name='search' />
+                            </Button.Content>
+                        </Button>
+                    </Form>
+                    <Label color='blue'>
+                        <h3>Son Eklenenler</h3>
+                    </Label>
+                </SearchContent>
+                <Content>
+                    <Search>
+                        {this.state.findList.length === 0
+                            ?
+                            null
+                            : <SearchList findList={this.state.findList} />
+                        }
+                    </Search>
+                    <LastAddedList>
+                        <LastAdded books={this.state.books} />
+                    </LastAddedList>
+                </Content>
+                <Segment>
+                        <Header as='h4' icon='wait' content='Aradığın kitabı bulamadıysan beklenenlere ekleyebilirsin..' />
+                        <Button color='red' onClick={this.routeAddWaitingBook}>Ekle</Button>
+                    </Segment>
+            </Container>
+        );
     }
 
     getJsonData() {
@@ -116,47 +162,6 @@ export class SearchBook extends Component {
     }
 
     routeAddWaitingBook = () => {
-        window.location.href = `/addWaitingBook`;
-    }
-
-    render() {
-        return (
-            <Container>
-                <Content>
-                    <Header as='h2' icon='search' onClick={this.props.routeSearchBook} content='Kitap Ara' />
-                        <Menu />
-                </Content>
-                <SearchContent>
-                    <Form onSubmit={this.searchData}>
-                        <Input onChange={this.onInputChange} id="bookName" placeholder='Kitap ara' />
-                        <Button onClick={this.searchData} color='blue' animated='fade'>
-                            <Button.Content hidden>Ara</Button.Content>
-                            <Button.Content visible>
-                                <Icon name='search' />
-                            </Button.Content>
-                        </Button>
-                    </Form>
-                    <Label color='blue'>
-                        <h3>Son Eklenenler</h3>
-                    </Label>
-                </SearchContent>
-                <Content>
-                    <Search>
-                        {this.state.findList.length === 0
-                            ?
-                            null
-                            : <SearchList findList={this.state.findList} />
-                        }
-                    </Search>
-                    <LastAddedList>
-                        <LastAdded books={this.state.books} />
-                    </LastAddedList>
-                </Content>
-                <Segment>
-                        <Header as='h4' icon='wait' content='Aradığın kitabı bulamadıysan beklenenlere ekleyebilirsin..' />
-                        <Button color='red' onClick={this.routeAddWaitingBook}>Ekle</Button>
-                    </Segment>
-            </Container>
-        );
+        window.location.href = `/addWaitingBook`
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { List } from 'semantic-ui-react';
 
-import { DataList, IconContent, HedaderContent } from './searchBookStyle';
+import { DataList, IconContent, HedaderContent } from '../page/SearchBook.styled';
 
 export class SearchList extends Component {
     constructor(){

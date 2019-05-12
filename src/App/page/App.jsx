@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { AddBook, NavigationMenu as Menu } from "../components"
-// import { SearchBook } from '../../component/SearchBook/searchBook';
+import { AddBook, NavigationMenu as Menu, SearchBook, Card } from "../components"
 // import { BookCard } from '../../component/Card/card';
 // import { AddWaitingBook } from '../../component/AddBook/addWaitingBook';
 
@@ -22,13 +21,13 @@ class App extends React.Component {
             <Route path="/add-book">
               <AddBook />
             </Route>
-            {/* <Route path="/search-book">
+             <Route path="/search-book">
               <SearchBook />
             </Route>
             <Route path="/card">
-              <BookCard />
+              <Card />
             </Route>
-            <Route path="/addWaitingBook">
+            {/*<Route path="/addWaitingBook">
               <AddWaitingBook />
             </Route> */}
           </Switch>

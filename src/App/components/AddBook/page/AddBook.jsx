@@ -3,7 +3,7 @@ import Moment from 'moment'
 
 import Menu from "../../common/NavigationMenu/NavigationMenu"
 
-import { postJSON } from "../../../../util/request"
+import { postJSON, getJSON } from "../../../../util/request"
 
 import { Button, Form, Header, Icon, Input } from 'semantic-ui-react';
 import { Container, Content, FormWrapper } from './AddBook.styled';
@@ -18,6 +18,12 @@ export default class AddBook extends React.Component {
         };
 
         this.addBook = this.addBook.bind(this);
+    }
+
+    componentDidMount(){
+        getJSON({
+            
+        })
     }
 
     render() {
