@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Route } from "react-router-dom"
 
 import { List } from 'semantic-ui-react'
 import { DataList, IconContent, HedaderContent } from '../page/SearchBook.styled'
@@ -17,13 +18,13 @@ export class LastAdded extends Component{
         let count=0;
         const items = this.props.books.map((elem) =>{
 
-            if(count === 10){
+            if(count === 14){
                 return null
             }
 
             count++;
 
-            return(    
+            return(  ü<  
                 <List.Item name={elem.book} onClick={this.onSearch} key = {elem.id}>
                     <DataList>
                         <IconContent>

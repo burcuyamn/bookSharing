@@ -1,5 +1,6 @@
 import React from 'react'
 import Moment from 'moment'
+import { Route } from "react-router-dom"
 
 import Menu from "../../common/NavigationMenu/NavigationMenu"
 
@@ -153,6 +154,6 @@ export default class AddBook extends React.Component {
     }
 
     onSearch = (book) => {
-        window.location.href = `card/${book}`;
+        return <Route path="card" exact component={book} />
     }
 }

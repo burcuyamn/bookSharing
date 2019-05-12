@@ -181,7 +181,7 @@
       "id": 16
     }
   ],
-  "waitingBooks": [
+  "expectedBook": [
     {
       "bookName": "dasd",
       "book": "dasd",

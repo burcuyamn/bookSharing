@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
-import { Link } from "react-router-dom"
+import React from 'react'
 import Moment from 'moment'
 
-import { NavigationMenu as Menu } from "../../../"
+import { NavigationMenu as Menu } from "../../.."
 
 import { postJSON } from "../../../../../util/request"
 
 import { Button, Form, Header, Icon, Input, Modal } from 'semantic-ui-react'
 import { Container, Content, FormWrapper } from '../../page/AddBook.styled'
 
-export class AddWaitingBook extends Component {
+export default class ExpectedBook extends React.Component {
     constructor() {
         super()
 
@@ -24,7 +23,7 @@ export class AddWaitingBook extends Component {
         return (
             <Container>
                 <Content>
-                    <Header as='h2' icon='wait' onClick={this.props.routeAddWaitingBook } content='Beklenenlere Ekle' />
+                    <Header as='h2' icon='wait' onClick={this.props.routeExpectedBook } content='Beklenenlere Ekle' />
                     <Menu />
                 </Content>
                 <FormWrapper>
@@ -125,7 +124,7 @@ export class AddWaitingBook extends Component {
             author === "" || author === null
         )) {
             postJSON({
-                url: "waitingBooks",
+                url: "expectedBook",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     bookName: bookName,

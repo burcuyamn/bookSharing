@@ -1,13 +1,13 @@
 import AddBook from "./AddBook/page/AddBook"
-import AddWaitingBook from "./AddBook/components/AddWaitingBook/AddWaitingBook"
+import ExpectedBook from "./AddBook/components/ExpectedBook/ExpectedBook"
 import NavigationMenu from "./common/NavigationMenu/NavigationMenu"
 import SearchBook from "./SearchBook/page/SearchBook"
 import Card  from "./Card/page/Card"
 
 export {
     AddBook,
-    AddWaitingBook,
+    ExpectedBook,
     NavigationMenu,
     SearchBook,
-    Card
+    Card,
 }

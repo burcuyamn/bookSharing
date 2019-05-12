@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { AddBook, NavigationMenu as Menu, SearchBook, Card } from "../components"
-// import { BookCard } from '../../component/Card/card';
-// import { AddWaitingBook } from '../../component/AddBook/addWaitingBook';
+import { AddBook, ExpectedBook, NavigationMenu as Menu, SearchBook, Card } from "../components"
 
 import { MenuWrapper, Container } from './App.styled';
 
@@ -18,18 +16,18 @@ class App extends React.Component {
                 <Menu center />
               </MenuWrapper>
             </Route>
-            <Route path="/add-book">
+            <Route path="/add">
               <AddBook />
             </Route>
-             <Route path="/search-book">
+             <Route path="/search">
               <SearchBook />
             </Route>
             <Route path="/card">
               <Card />
             </Route>
-            {/*<Route path="/addWaitingBook">
-              <AddWaitingBook />
-            </Route> */}
+            <Route path="/expected">
+              <ExpectedBook />
+            </Route>
           </Switch>
         </BrowserRouter>
       </Container>

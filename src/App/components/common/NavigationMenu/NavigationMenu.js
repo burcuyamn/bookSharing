@@ -12,10 +12,10 @@ export default class NavigationMenu extends React.Component {
         return (
             <MenuContainer>
                 <Menu pointing>
-                    <Link to="/search-book">
+                    <Link to="/search">
                         <Menu.Item name='Kitap Ara' />
                     </Link>
-                    <Link to="/add-book">
+                    <Link to="/add">
                         <Menu.Item name='Kitap Ekle' />
                     </Link>
                 </Menu>

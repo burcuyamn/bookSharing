@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
-import { Redirect, Link as RouterLink } from "react-router-dom"
+import React from 'react';
+import { Route } from "react-router-dom"
 
 import { SearchList } from '../components/SearchedList';
 import { LastAdded } from '../components/LastAdded';
 
 import Menu from "../../common/NavigationMenu/NavigationMenu"
+import NavigationExpectedBook from "../NavigationExpectedBook"
 
 import { Button, Header, Icon, Input, Label, Form, Segment } from 'semantic-ui-react';
 import { Container, Content, SearchContent, LastAddedList, Search } from './SearchBook.styled';
 
 import { getJSON } from "../../../../util/request"
 
-export default class SearchBook extends Component {
+export default class SearchBook extends React.Component {
     constructor() {
         super();
 
@@ -67,10 +68,7 @@ export default class SearchBook extends Component {
                         <LastAdded books={this.state.books} />
                     </LastAddedList>
                 </Content>
-                <Segment>
-                        <Header as='h4' icon='wait' content='Aradığın kitabı bulamadıysan beklenenlere ekleyebilirsin..' />
-                        <Button color='red' onClick={this.routeAddWaitingBook}>Ekle</Button>
-                    </Segment>
+                <NavigationExpectedBook/>
             </Container>
         );
     }
@@ -123,7 +121,7 @@ export default class SearchBook extends Component {
         let value = this.state.findList.length;
         if (value !== 0) {
             this.state.findList.map((element) => {
-                return window.location.href = `card/${element.book}`;
+                return <Route path="card" exact component={element.book} />
             });
         }
     }
@@ -159,9 +157,5 @@ export default class SearchBook extends Component {
 
     onInputChange = (e) => {
         this.findBook(e.currentTarget.value);
-    }
-
-    routeAddWaitingBook = () => {
-        window.location.href = `/addWaitingBook`
     }
 }
