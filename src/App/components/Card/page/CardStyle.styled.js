@@ -24,37 +24,6 @@ export const Content = styled.div`
         width:100%;   
     }
 `;
-export const MenuContainer = styled.div`
-    display: flex;
-
-    flex-direction: row;
-    justify-content:flex-end;
-    align-items: flex-end;
-
-    width:100%;
-`;
-
-export const ItemContainer = styled.div`
-    display: flex;
-
-    flex-direction: column;
-    justify-content:flex-start;
-    align-items:flex-start;
-
-    width:100%;
-
-    .ui.items{    
-       .item{
-           padding:0px;
-           .middle.aligned.content{
-                display:flex;
-                flex-direction:column;
-           }
-       }
-    }
-   
-`;
-
 export const CardWrapper = styled.div`
     display: flex;
 

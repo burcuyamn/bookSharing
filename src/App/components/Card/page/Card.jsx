@@ -6,7 +6,7 @@ import { Icon, Image, Item, Card } from 'semantic-ui-react';
 
 import Menu from "../../common/NavigationMenu/NavigationMenu"
 
-import { ItemContainer, Container, Content, MenuContainer, CardWrapper } from './CardStyle.styled'
+import { Container, Content, CardWrapper } from './CardStyle.styled'
 
 export default class BookCard extends React.Component {
     constructor(props) {
