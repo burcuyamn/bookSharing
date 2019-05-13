@@ -152,7 +152,7 @@ export default class AddBook extends React.Component {
             alert("Kitapın adı, yazarı ve mail adresiniz boş olamaz.");
         }
     }
-
+ 
     onSearch = (book) => {
         return <Route path="card" exact component={book} />
     }

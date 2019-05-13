@@ -107,129 +107,9 @@
       "phone": "",
       "date": "08/27/2018",
       "id": 10
-    },
-    {
-      "bookName": "sad",
-      "book": "sad",
-      "author": "dsa",
-      "printingYear": "",
-      "bookImage": "https://react.semantic-ui.com/images/wireframe/image.png",
-      "fullName": "",
-      "email": "sad",
-      "phone": "",
-      "date": "05/11/2019",
-      "id": 11
-    },
-    {
-      "bookName": "Yüzüklerin Efendisi",
-      "book": "yuzuklerin-efendisi",
-      "author": "J.R.R Tolkien",
-      "printingYear": "2010",
-      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
-      "fullName": "burcu yaman",
-      "email": "burcuyaman16@hotmail.com",
-      "phone": "0543 221 9893",
-      "date": "05/11/2019",
-      "id": 12
-    },
-    {
-      "bookName": "sad",
-      "book": "sad",
-      "author": "sad",
-      "printingYear": "",
-      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
-      "fullName": "",
-      "email": "dasd",
-      "phone": "",
-      "date": "05/12/2019",
-      "id": 13
-    },
-    {
-      "bookName": "sad",
-      "book": "sad",
-      "author": "sad",
-      "printingYear": "",
-      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
-      "fullName": "",
-      "email": "dasd",
-      "phone": "",
-      "date": "05/12/2019",
-      "id": 14
-    },
-    {
-      "bookName": "wewe",
-      "book": "wewe",
-      "author": "ewewe",
-      "printingYear": "",
-      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
-      "fullName": "",
-      "email": "ewew",
-      "phone": "",
-      "date": "05/12/2019",
-      "id": 15
-    },
-    {
-      "bookName": "asd",
-      "book": "asd",
-      "author": "dsds",
-      "printingYear": "",
-      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
-      "fullName": "",
-      "email": "da",
-      "phone": "",
-      "date": "05/12/2019",
-      "id": 16
     }
   ],
   "expectedBook": [
-    {
-      "bookName": "dasd",
-      "book": "dasd",
-      "author": "asdasd",
-      "printingYear": "",
-      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
-      "fullName": "",
-      "email": "asdasd",
-      "phone": "",
-      "date": "09/21/2018",
-      "id": 1
-    },
-    {
-      "bookName": "cscsdsc",
-      "book": "cscsdsc",
-      "author": "sdcds",
-      "printingYear": "",
-      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
-      "fullName": "",
-      "email": "csdcsdc",
-      "phone": "",
-      "date": "09/21/2018",
-      "id": 2
-    },
-    {
-      "bookName": "z<xas",
-      "book": "zxas",
-      "author": "asaS",
-      "printingYear": "",
-      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
-      "fullName": "",
-      "email": "asAS",
-      "phone": "",
-      "date": "09/21/2018",
-      "id": 3
-    },
-    {
-      "bookName": "dasd",
-      "book": "dasd",
-      "author": "asdasd",
-      "printingYear": "",
-      "bookImage": "https://react.semantic-ui.com/images/avatar/large/matthew.png",
-      "fullName": "berat",
-      "email": "burcu.yaman@gvg.com.tr",
-      "phone": "",
-      "date": "11/03/2018",
-      "id": 4
-    },
     {
       "bookName": "Kayıp Sembol",
       "book": "kayip-sembol",
@@ -240,7 +120,7 @@
       "email": "subu@gmail.com",
       "phone": "5242735452",
       "date": "05/11/2019",
-      "id": 5
+      "id": 1
     }
   ]
 }

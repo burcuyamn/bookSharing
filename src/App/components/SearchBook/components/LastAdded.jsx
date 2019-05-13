@@ -24,7 +24,7 @@ export class LastAdded extends Component{
 
             count++;
 
-            return(  ü<  
+            return(  
                 <List.Item name={elem.book} onClick={this.onSearch} key = {elem.id}>
                     <DataList>
                         <IconContent>
