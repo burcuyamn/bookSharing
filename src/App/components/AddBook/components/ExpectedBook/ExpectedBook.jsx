@@ -6,7 +6,7 @@ import { NavigationMenu as Menu } from "../../.."
 import { postJSON } from "../../../../../util/request"
 
 import { Button, Form, Header, Icon, Input, Modal } from 'semantic-ui-react'
-import { Container, Content, FormWrapper } from '../../page/AddBook.styled'
+import { Container, Content, FormWrapper } from './ExpectedBook.styled'
 
 export default class ExpectedBook extends React.Component {
     constructor() {

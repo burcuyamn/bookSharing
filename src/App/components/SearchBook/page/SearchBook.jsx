@@ -8,7 +8,7 @@ import Menu from "../../common/NavigationMenu/NavigationMenu"
 import NavigationExpectedBook from "../NavigationExpectedBook"
 
 import { Button, Header, Icon, Input, Label, Form, Segment } from 'semantic-ui-react';
-import { Container, Content, SearchContent, LastAddedList, Search } from './SearchBook.styled';
+import { Container, Content, LastAddedList, Search, SearchContent } from './SearchBook.styled';
 
 import { getJSON } from "../../../../util/request"
 

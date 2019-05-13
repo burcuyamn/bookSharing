@@ -2,7 +2,7 @@ import React from 'react';
 
 import { getJSON } from "../../../../util/request"
 
-import { Icon, Image, Item, Card } from 'semantic-ui-react';
+import { Icon, Image, Card } from 'semantic-ui-react';
 
 import Menu from "../../common/NavigationMenu/NavigationMenu"
 
@@ -42,9 +42,9 @@ export default class BookCard extends React.Component {
                             </Card.Content>
                             <Card.Content extra>
                                 <a>
-                                    <Icon name='like' />
+                                <Icon name='like' />
                                     22 Like
-                                    </a>
+                                </a>
                             </Card.Content>
                         </Card>
                     </CardWrapper>
